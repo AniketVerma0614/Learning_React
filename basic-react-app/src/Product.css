@@ -1,6 +1,29 @@
-.Product{
-    border: 1px solid black;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    padding-top: 0 10px 0 10px;
+.Product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Product:hover {
+    transform: scale(1.05);
+}
+
+.Product-title {
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.Product-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
 }

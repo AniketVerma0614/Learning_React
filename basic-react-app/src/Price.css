@@ -1,0 +1,16 @@
+.Price-container {
+    margin-top: 10px;
+}
+
+.Price-old {
+    text-decoration: line-through;
+    color: red;
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.Price-new {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}

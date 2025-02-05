@@ -1,13 +1,21 @@
-function Product({ title, price = 100, features = [], features2 = {}, styles }) {
-    const finalPrice = price > 30000 ? price * 0.95 : price;
+import "./Product.css";
+import Price from "./Price.jsx";
 
+let oldPrices = ["12,495", "11,900", "1,599", "599"];
+let newPrices = ["8,999", "9,199", "899", "278"];
+let descriptions = [
+    "8,000 DPI • 5 Programmable Buttons",
+    "Intuitive touch surface • Designed for iPad Pro",
+    "Intuitive touch surface • Designed for iPad Pro",
+    "Wireless Mouse 2.4GHz • Optical Orientation"
+];
+
+function Product({ title, idx }) {
     return (
-        <div style={styles.container}>
-            <h3 style={styles.title}>{title}</h3>
-            <h5 style={styles.price}>Price: ₹{finalPrice}</h5>
-            {price > 30000 && <p style={styles.discount}>5% Discount Applied!</p>}
-            <p style={styles.features}>Features: {features.join(", ")}</p>
-            <p style={styles.features}>Feature A: {features2.a || "N/A"}</p>
+        <div className="Product">
+            <h4>{title}</h4>
+            <p>{descriptions[idx]}</p>
+            <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]} />
         </div>
     );
 }
